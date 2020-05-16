@@ -1,0 +1,247 @@
+
+/* colores
+verde clro  22e1a8 
+morado claro e5d8ea
+oscuro azul 94b4c9
+
+ */
+
+ .color-morado-0 { color: #E5D8EA }	/* Main Primary color */
+.color-morado-1 { color: #FFFFFF }
+.color-morado-2 { color: #F8F5FA }
+.color-morado-3 { color: #C7ADD1 }
+.color-morado-4 { color: #9E78AD }
+
+.color-verde-0 { color: #F3FAE6 }	/* Main Secondary color (1) */
+.color-verde-1 { color: #FFFFFF }
+.color-verde-2 { color: #FCFEF9 }
+.color-verde-3 { color: #E4F4C9 }
+.color-verde-4 { color: #D0ECA1 }
+
+.color-azul-4 { color: #94b4c9 }
+
+@font-face{
+    font-family: menus;
+    src: url(../fonts/WriterLine.ttf);
+    }
+
+    @font-face{
+        font-family: textos;
+        src: url(../fonts/linowrite.ttf);
+        }
+
+a:link, a:visited, a:active {
+ text-decoration:none;
+ }    
+
+
+
+ .menu ul{
+        display: flex;
+        justify-content: center;
+        align-content: center;      
+    }
+    
+.menu li{
+    list-style-type: none;
+    float: left;
+    padding: 10px;
+    background-color: #C7ADD1;
+    border: white 1px solid;
+    font-family: menus;
+    height: 8%;
+    width: 150px;
+    justify-content: center;
+            }
+
+.menu a{
+      color:white;
+}
+
+.menu ul :hover{
+    background-color: #9E78AD;
+}
+
+.menu ul :active{
+    background-color: #F8F5FA;
+}
+
+.nav{
+    display:block;
+    justify-content: center;
+    align-items: center;
+}
+
+#index{
+    background: url(../img/Background.JPG) no-repeat center;
+    height: 600px;
+    clear: left;
+    font-family: menus;
+font-size: 30px;
+display:flex;
+align-items: center;
+}
+
+#index span{
+margin-left: 10%;
+color:grey;
+font-family: textos;
+}
+
+#sobremi{
+    clear:left;
+    color:grey;
+    font-family: monospace;
+    font-size: 18px;
+    padding: 10px 40px 10px 40px;
+    margin: 30px 40px 10px 40px;
+        border-radius: 20px;
+        
+}
+
+#sobremi img{
+        border-radius: 20px;
+        margin-left: 40%;
+}
+
+@media (max-width:800px){
+    #index span{
+        margin-left: 0%;
+        }
+}
+
+@media (min-width:1200px){
+    #index span{
+        margin-left: 20%;
+        }
+}
+
+body{
+    background-color:#f5fffc;
+
+}
+
+.animacionColor{
+    animation: colorchange 16s infinite;
+}
+
+@keyframes colorchange {
+    0% { background: #f5fffc }
+    20% { background: #D0ECA1 }
+    50%{  background: white}
+    60% { background: #D0ECA1 }
+    100% { background: #f5fffc }
+  }
+  
+
+  .modal-contenido{
+    width: 700px;;
+    padding: 10px 20px 10px 20px;
+    margin: 10% auto 10% auto;
+    position: relative;
+  }
+  .modal{
+    background-color: rgba(255, 255, 255, 0.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    transition: all 1s;
+  }
+  #miModal:target{
+    opacity:1;
+    pointer-events:auto;
+  }
+
+ .centrar{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        align-content: center;
+        justify-content: center;
+       
+  }
+
+  .ventana{
+      font-family:monospace;
+      background-color: #F8F5FA;
+      border-radius: 10px;
+     margin-top:3%;
+     height:80%;
+
+  }
+
+  .img-zoom img {
+    -webkit-transition:all .9s ease; /* Safari y Chrome */
+    -moz-transition:all .9s ease; /* Firefox */
+    -o-transition:all .9s ease; /* IE 9 */
+    -ms-transition:all .9s ease; /* Opera */
+    width:100%;
+    }
+    .img-zoom:hover img {
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
+    }
+    .img-zoom {/*Ancho y altura son modificables al requerimiento de cada uno*/
+    width:300px;
+    overflow:hidden;
+    }
+
+    .slider{
+      width: 95%;  
+      margin: auto;
+      overflow:hidden;
+    }
+
+    .slider ul{
+        padding:0;
+        display:flex;
+        width: 400%;
+
+        animation: cambio 20s infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+    }
+.experiencia{
+   width:  100%;
+}
+
+    .slider img{
+    
+  width: 670px; 
+  height: auto;
+    }
+
+    .slider li{
+        list-style: none;
+    }
+
+    @keyframes cambio{
+        0% {margin-left: 0;}
+        20% {margin-left: 0;}
+
+        25% {margin-left: -100%;}
+        45% {margin-left: -100%;}
+
+        50% {margin-left: -200%;}
+        70% {margin-left: -200%;}
+
+        75% {margin-left: -300%;}
+        100% {margin-left: -300%;}
+    }
+
+    .experiencia a{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .descripcion{
+        font-size: 16px;
+    }
+  
