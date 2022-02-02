@@ -42,9 +42,14 @@ const express = require('express'),
         respuesta.sendFile(`${__dirname}/views/aptitudes.html`);
     });
    
+    let port = process.env.PORT;
+    if (port == null || port == "") {
+      port = 3030;
+    }
+    app.listen(port);
+    
 
-
-      app.listen(3030);
+  
       console.log("funciona");
 
 
